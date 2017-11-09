@@ -1,0 +1,13 @@
+[
+	{
+		"path": "/tasks/*",
+		"data": true
+	},
+
+	{
+        "description": "Update event",
+        "path": "/tasks/:id",
+        "method": "PATCH",
+        "data": true
+    }
+]
