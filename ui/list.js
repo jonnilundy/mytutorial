@@ -1,5 +1,7 @@
 var list = document.querySelector('.list');
 
+var weAuth = WeDeploy.auth('auth-albertwetutorial.wedeploy.io');
+
 var save = document.querySelector('#savebtn');
 
 var weData = WeDeploy.data('db-albertwetutorial.wedeploy.io');
@@ -7,7 +9,6 @@ var weData = WeDeploy.data('db-albertwetutorial.wedeploy.io');
 WeDeploy
     .data('db-albertwetutorial.wedeploy.io')
     .orderBy('id', 'desc')
-    .limit(5)
     .get('tasks')
     .then(function(response) {
         appendTasks(response);
@@ -41,8 +42,18 @@ function myUpdate(id, name){
 }
 
 function myQuery(){
-    
+    weData
+        .where('idade', '<', 40)
+        .where('idade', '>', 10)
+        .get('tasks')
+        .then(function(response) {
+            console.log('Filtro: ', response);
+        })
+        .catch(function(error) {
+            console.error(error);
+        });
 }
+
 save.addEventListener("click", function(e){
 
     var names = document.querySelectorAll('.tasklist');

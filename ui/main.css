@@ -74,13 +74,6 @@ a {
 	display: block;
 }
 
-#savebtn {
-	color: #66ff66;
-	text-decoration: none;
-	margin: 15px 0 0;
-	display: block;
-	text-decoration-color: #ffffff;
-}
 
 .list {
 	color: rgba(255, 255, 255, .7);
