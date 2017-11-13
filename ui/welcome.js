@@ -5,7 +5,7 @@ form.addEventListener('submit', function(e) {
 // Insert save data method below
     WeDeploy
         .data('db-albertwetutorial.wedeploy.io')
-        .create('tasks', {name: form.item.value })
+        .create('tasks', {name: form.item.value, idade: 15, tempo: 13})
         .then(function(response) {
             form.reset();
             form.item.focus();
