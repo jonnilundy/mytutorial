@@ -8,15 +8,16 @@
 </head>
 
 <body>
-	<form class="container" id="form" onsubmit="signIn(); return false;">
+	<form class="container" id="form"	>
 		<img src="./logo.png">
-		<input type="text" name="user" autofocus="true" placeholder="User" required="true" />
+		<input type="text" name="user" autofocus="true" placeholder="Email" required="true" />
 		<input type="password" name="password" autofocus="true" placeholder="Password" required="true" />
 		<button type="submit">Enter</button>
 		<a href="./signup.html">Sign Up</a>
 	</form>
 
 	<script src="https://cdn.wedeploy.com/api/4.0.1/wedeploy.js"></script>
-	<script type="./newindex.js"></script>
+	<script src="./index.js"></script>
+	<script>if (weAuth.currentUser) {location.href = '/welcome.html';}</script>
 </body>
 </html>

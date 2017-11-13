@@ -7,4 +7,20 @@
 	<link rel="stylesheet" href="main.css">
 </head>
 
-//TODO implement the sign up page
+<body>
+	
+	<form >
+		<label>User name:</label>
+		<input type="text" name="username" placeholder="User" required>
+		<label>Email:</label>
+		<input type="text" name="email" placeholder="example@wedeploy.com" required>
+		<label>Password:</label>
+		<input type="password" name="password" placeholder="Password" required>
+		<a href="/">Back</a>
+		<button type="submit">Register</button>
+
+	</form>
+	<script src="https://cdn.wedeploy.com/api/4.0.1/wedeploy.js"></script>
+	<script>if (weAuth.currentUser == null) {location.href = '/';}</script>
+	<script src="signup.js"></script>
+</body>

@@ -1,5 +1,7 @@
 var list = document.querySelector('.list');
 
+var weAuth = WeDeploy.auth('auth-albertwetutorial.wedeploy.io');
+
 var save = document.querySelector('#savebtn');
 
 var weData = WeDeploy.data('db-albertwetutorial.wedeploy.io');
@@ -7,7 +9,6 @@ var weData = WeDeploy.data('db-albertwetutorial.wedeploy.io');
 WeDeploy
     .data('db-albertwetutorial.wedeploy.io')
     .orderBy('id', 'desc')
-    .limit(5)
     .get('tasks')
     .then(function(response) {
         appendTasks(response);
