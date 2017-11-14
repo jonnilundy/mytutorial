@@ -1,15 +1,13 @@
 var form = document.querySelector('form');
 
+var weAuth = WeDeploy.auth('auth-albertwetutorial.wedeploy.io');
+
+
 form.addEventListener('submit', function(e) {
 	e.preventDefault();
-// Insert save data method below
     WeDeploy
         .data('db-albertwetutorial.wedeploy.io')
-<<<<<<< HEAD
-        .create('tasks', {name: form.item.value, idade: 15, tempo: 13})
-=======
         .create('tasks', {name: form.item.value, idade: rand()})
->>>>>>> e1812adfd804ddb5b74e08bb492ee3bdeb05ce66
         .then(function(response) {
             form.reset();
             form.item.focus();
@@ -18,17 +16,23 @@ form.addEventListener('submit', function(e) {
         .catch(function(error) {
             console.error(error);
         });
-// Insert save data method above
 });
 
-function generateUser(){
-    for(var i = 0; i<20;i++){
+function out(){
+    weAuth
+        .signOut()
+        .then(function(){
+            location.href = 'index.html';
+        });
+}
+
+function generateTasks(n){
+    for(var i = 0; i<n;i++){
         var r = rand();
         WeDeploy
             .data('db-albertwetutorial.wedeploy.io')
             .create('tasks', {name: 'Random '+r, idade: r});        
     }
-
 }
 
 

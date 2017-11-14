@@ -3,6 +3,13 @@ html, body {
 	height: 100%;
 }
 
+#logout{
+	position: fixed; 
+	right: 10px; 
+	top: 5px; 
+	color: white;
+}
+
 body {
 	background: #0e141a;
 	font-family: 'Open Sans', sans-serif;

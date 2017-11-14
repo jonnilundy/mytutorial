@@ -21,11 +21,3 @@ function signIn(){
 			alert('Try again!');
 		});
 }
-
-function out(){
-	weAuth
-		.signOut()
-		.then(function(){
-			location.href = 'newindex.html';
-		});
-}

@@ -7,6 +7,10 @@
 	<link rel="stylesheet" href="main.css">
 </head>
 <body>
+	<div >
+		<div id="logout">
+			<a onclick="out();">Logout</a>
+		</div>
 	<form class="container">
 		<h1>To-do List</h1>
 		<label for="item">Item Description</label>
@@ -20,6 +24,6 @@
 	<!-- Insert API Client link below -->
 	<script src="https://cdn.wedeploy.com/api/4.0.1/wedeploy.js"></script>
 	<script src="welcome.js"></script>
-	<!-- Insert API Client link above -->
+	<script> if(weAuth.currentUser == null)out();location.href = 'index.html';</script>
 </body>
 </html>
