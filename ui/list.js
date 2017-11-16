@@ -60,6 +60,14 @@ function myQuery(){
         });
 }
 
+function myAggregate(){
+    var x = weData
+                .aggregate('name', 'tempo', 'sum')
+                .get('name');
+
+    console.log(x);
+}
+
 save.addEventListener("click", function(e){
 
     var names = document.querySelectorAll('.tasklist');
