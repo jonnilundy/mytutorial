@@ -19,9 +19,6 @@ body {
 	text-align: center;
 }
 
-.container {
-	max-width: 50%;
-}
 
 h1 {
 	font-weight: 300;
@@ -41,7 +38,7 @@ label {
 	color: white;
 	display: block;
 	margin: 0 0 5px;
-	text-align: left;
+	text-align: center;
 }
 
 input {
@@ -54,7 +51,7 @@ input {
 	line-height: 58px;
 	outline: none;
 	padding: 0 20px;
-	width: calc(100% - 40px);
+	width: 50%;
 	margin: 0 0 10px;
 }
 
@@ -71,7 +68,7 @@ button {
 	outline: none;
 	margin: 15px 0 0;
 	padding: 0 48px;
-	width: 100%;
+	width: 50%;
 }
 
 a {
@@ -84,4 +81,5 @@ a {
 
 .list {
 	color: rgba(255, 255, 255, .7);
+	width: 100%;
 }

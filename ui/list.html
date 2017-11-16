@@ -10,16 +10,14 @@
 		<div id="logout">
 			<a onclick="out();">Logout</a>
 		</div>
-	<form class="container">
+	<form style="width: 40%;">
 		<h1>To-do List</h1>
 		<div class="list">Loading...</div>
 		<a href="/">Back to home</a>
 		<button type="submit" id="savebtn">Save</button>
 	</form>
 
-	<!-- Insert API Client link below -->
 	<script src="https://cdn.wedeploy.com/api/4.0.1/wedeploy.js"></script>
-	<!-- Insert API Client link above -->
 	<script src="list.js"></script>
 	<script src="welcome.js"></script>
 	<script>if (weAuth.currentUser == null) {location.href = '/';}</script>
