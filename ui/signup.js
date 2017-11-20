@@ -2,8 +2,6 @@ var weAuth = WeDeploy.auth('auth-albertwetutorial.wedeploy.io');
 
 var form = document.querySelector('form');
 
-form.addEventListener('submit', function(e){register()});
-
 function register(){
 	weAuth
 		.createUser({
@@ -12,7 +10,8 @@ function register(){
 			'password': form.password.value
 		})
 		.then(function(response){
-            alert('Registered!');
+			console.info("User: ", response);
+            alert("Registered successfully!");
             document.location.href = 'index.html';	
 		})
 		.catch(function(error){
