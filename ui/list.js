@@ -28,26 +28,28 @@ function appendTasks(tasks) {
 	list.innerHTML = taskList;
 }
 
+function myWatch(){
+    weData
+        .limit(3)
+        .watch('tasks/')
+        .on('changes', function(data) {
+            console.info("DADOS MUDARAM: ", data);
+            console.log(data);
+            alert("MUDOU: "+data);
+        })
+        .on('fail', function(error) {
+            console.log(error);
+        });
+}
 
 function myUpdate(id, name){
     weData
-    .update('tasks/'+id, {"name": name})
-    .then(function(task){
-        console.info('Updated task: ', task);
-        
-    })
-    .catch(function(error) {
-        console.error(error);
-    });
+        .update('tasks/'+id, {"name": name});
+}
+
+function myDelete(id){
     weData
-    .update('tasks/', {'idade': 10, 'tempo': 13})
-    .then(function(task){
-        console.info('Updated task: ', task);
-        
-    })
-    .catch(function(error) {
-        console.error(error);
-    });
+        .delete('tasks');
 }
 
 function myQuery(){
@@ -76,5 +78,4 @@ save.addEventListener("click", function(e){
     for(var i = 0; i< names.length;i++){
         myUpdate(ids[i].value, names[i].value);
     }
-    alert("All tasks were updated!");
 }, false);

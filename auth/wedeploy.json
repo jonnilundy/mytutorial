@@ -3,6 +3,10 @@
 	"image": "wedeploy/auth:0.0.1",
 	"env": {
 		"WEDEPLOY_AUTH_SECURE_FIELDS": "password",
-		"WEDEPLOY_AUTH_PASSWORD": "true"
+		"WEDEPLOY_AUTH_PASSWORD": "true",
+		
+		"WEDEPLOY_AUTH_FACEBOOK": "true",
+        "WEDEPLOY_AUTH_FACEBOOK_CLIENT_ID": "145669032737268",
+        "WEDEPLOY_AUTH_FACEBOOK_CLIENT_SECRET": "15ba6c836f949b99fe8a19ee2774cc87"
 	}
 }

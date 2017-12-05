@@ -21,3 +21,14 @@ function signIn(){
 			alert('Try again!');
 		});
 }
+
+var provider = new weAuth.provider.Facebook();
+provider.setProviderScope("email");
+
+function facebook(){
+	weAuth.signInWithRedirect(provider);
+	weAuth.onSignIn(function(user){
+		console.log(user);
+		document.location.href = '/welcome.html';
+	});
+}
