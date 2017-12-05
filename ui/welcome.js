@@ -1,7 +1,7 @@
 var form = document.querySelector('form');
 
 var weAuth = WeDeploy.auth('auth-albertwetutorial.wedeploy.io');
-
+var weData =  WeDeploy.data('db-albertwetutorial.wedeploy.io');
 
 form.addEventListener('submit', function(e) {
 	e.preventDefault();
@@ -17,6 +17,23 @@ form.addEventListener('submit', function(e) {
             console.error(error);
         });
 });
+
+function myUpdate(id, name){
+    weData
+        .update('tasks/'+id, {"name": name});
+}
+
+weData
+    .limit(1)
+    .orderBy('id', 'desc')
+    .watch('tasks/')
+    .on('changes', function(data) {
+        console.info("DATA CHANGED: ", data);
+        console.log(data);
+    })
+    .on('fail', function(error) {
+        console.log(error);
+    });
 
 function out(){
     weAuth
@@ -35,6 +52,18 @@ function generateTasks(n){
     }
 }
 
+
+function getUser(userId){
+    weAuth
+        .getUser(userId)
+        .then(function(user){
+            console.log(user);
+            console.info("USER: ",user);
+        })
+        .catch(function(user){
+
+        });
+}
 
 function rand(){
     return Math.floor((Math.random() * 100) + 1);

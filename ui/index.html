@@ -13,11 +13,12 @@
 		<input type="text" name="user" autofocus="true" placeholder="Email" required="true" />
 		<input type="password" name="password" autofocus="true" placeholder="Password" required="true" />
 		<button type="submit">Enter</button>
+		<button onclick="facebook()" style="background-color: #3b5998;">Facebook</button>
 		<a href="./signup.html">Sign Up</a>
 	</form>
 
 	<script src="https://cdn.wedeploy.com/api/4.0.1/wedeploy.js"></script>
 	<script src="./index.js"></script>
-	<script>if (weAuth.currentUser!=null) {location.href = '/welcome';}</script>
+	<script>if (weAuth.currentUser!=null) {location.href = '/welcome.html';}</script>
 </body>
 </html>
